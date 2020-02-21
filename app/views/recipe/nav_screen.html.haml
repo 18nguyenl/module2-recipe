@@ -26,7 +26,7 @@
     }
 
     header {
-        background: black;
+        background: rgba(251, 192, 45, 0.8);
         color: white;
         width: 100%;
         height: 6rem;
@@ -82,6 +82,21 @@
         margin: 0 auto;
     }
     
+    ul
+    {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: white;
+        border-style: solid;
+        border-color: black transparent transparent transparent;
+        border-width: 2px;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+    
     #hamburger-menu
     {
         
@@ -112,16 +127,59 @@
         
     }
     
+    #previous-step
+    {
+        display: inline-block;
+        width: 96px;
+        height: 100%;
+        float: left
+    }
+    
+    #next-step
+    {
+        display: inline-block;
+        width: 96px;
+        height: 100%;
+        float: right;
+    }
+    
+    #help
+    {
+        display: inline-block;
+    }
+    
+    #home
+    {
+        display: inline-block;
+    }
+    
+    #alert-box
+    {
+        background-color: yellow;
+    }
+    
 %header#navigation-bar-top
     %div#hamburger-menu
         %p1 =
     %div#navigation-title 
-        %p1 Welcome
+        %p1 Step 2
     %div#icon-panel
         %div#help ?
+        %div#home H
 %main
     %section
         %article
-            %h1 How to Prepare Cereal
-            %img(src="https://images.unsplash.com/photo-1521483451569-e33803c0330c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1577&q=80")
-            %button START
+            %h1#step-title !    Pour Cereal
+            %title#sub-title Open Cereal Box 
+            %p1#description Open the tab to the cereal box and pull open the bag carefully and add the cereal to your bowl
+            %section#alert-box
+                %p1#alert-title Watch out for the cereals
+                %p1#alert-description If you apply too much force when opening the cereal bag, the cereal may go flying across the room
+
+%ul
+    %li#previous-step
+        %button <
+    %li#next-step
+        %button >
+        
+        https://www.w3schools.com/css/css_navbar.asp

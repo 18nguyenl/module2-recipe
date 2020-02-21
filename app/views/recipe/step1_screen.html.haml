@@ -82,6 +82,21 @@
         margin: 0 auto;
     }
     
+    ul
+    {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: white;
+        border-style: solid;
+        border-color: black transparent transparent transparent;
+        border-width: 2px;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+    
     #hamburger-menu
     {
         
@@ -112,16 +127,49 @@
         
     }
     
+    #previous-step
+    {
+        display: inline-block;
+        width: 96px;
+        height: 100%;
+        float: left
+    }
+    
+    #next-step
+    {
+        display: inline-block;
+        width: 96px;
+        height: 100%;
+        float: right;
+    }
+    
+    #help
+    {
+        display: inline-block;
+    }
+    
+    #home
+    {
+        display: inline-block;
+    }
+    
 %header#navigation-bar-top
     %div#hamburger-menu
         %p1 =
     %div#navigation-title 
-        %p1 Welcome
+        %p1 Step 1
     %div#icon-panel
         %div#help ?
+        %div#home H
 %main
     %section
         %article
-            %h1 How to Prepare Cereal
-            %img(src="https://images.unsplash.com/photo-1521483451569-e33803c0330c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1577&q=80")
-            %button START
+            %h1#step-title Grab Bowl
+            %p1#sub-title Retrieve bowl 
+            %p1#description Reach into your cabinet and grab a bowl to use as a container for your cereal. If you don’t have one, use a ziplock bag
+
+%ul
+    %li#previous-step
+        %button <
+    %li#next-step
+        %button >
