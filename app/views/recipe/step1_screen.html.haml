@@ -1,6 +1,11 @@
 :scss
+    * {
+        box-sizing: border-box;
+    }
+
     body {
         margin: 0;
+        width: 100%;
     }
 
     h1,
@@ -14,13 +19,19 @@
     }
 
     h1 {
-        font-size: 3rem;
+        font-size: 2rem;
+    }
+
+    a {
+        text-decoration: none;
+        
+        color: white;
     }
 
     article {
         width: 80%;
         
-        margin: 4rem auto;
+        margin: 1rem auto;
         
         overflow: hidden;
     }
@@ -29,7 +40,6 @@
         background: black;
         color: white;
         width: 100%;
-        height: 6rem;
     }
 
     img {
@@ -43,7 +53,7 @@
         border-radius: 1rem;
     }
 
-    button {
+    .md-button {
         appearance: none;
         -webkit-appearance: none;
         
@@ -81,66 +91,71 @@
         
         margin: 0 auto;
     }
-    
-    ul
-    {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-        background-color: white;
-        border-style: solid;
-        border-color: black transparent transparent transparent;
-        border-width: 2px;
-        position: fixed;
-        bottom: 0;
-        width: 100%;
-    }
-    
-    #hamburger-menu
-    {
-        
-        height: 100%;
-        padding: 2.5rem 0;
-        width: 96px;
+
+    #hamburger-menu {
         display: inline-block;
-        text-align: center;
-        
+
+        margin: 1rem;
+        margin-left: 2rem;
+        margin-right: 1.5rem;
     }
-    
+
     #navigation-title
     {
-        
-        height: 100%;
-        padding: 15px 0;
         display: inline-block;
-        
     }
-    
+
     #icon-panel
     {
-        
-        height: 100%;
-        padding: 2.5rem 0;
         display: inline-block;
+
         float: right;
+
+        margin: 1rem;
+        margin-right: 2rem;
+    }
+
+    #icon-panel i {
+        margin-left: 0.5rem;
+    }
+
+    #bottom-navigation-panel {
+        position: fixed;
+
+        bottom: 0;
+        left: 0;
+
+        margin-bottom: 0;
+
+        width: 100%;
+
+        border-top: solid 1px ghostwhite;
         
+        padding: 0;
     }
     
-    #previous-step
+    .previous-step
     {
         display: inline-block;
-        width: 96px;
-        height: 100%;
-        float: left
+
+        margin-left: 1rem;
     }
     
-    #next-step
+    .next-step
     {
         display: inline-block;
-        width: 96px;
-        height: 100%;
+
+        margin-right: 1rem;
+
         float: right;
+    }
+
+    button .fas {
+        font-size: 2rem;
+    }
+
+    #bottom-navigation-panel button {
+        padding: 0.5rem;
     }
     
     #help
@@ -155,21 +170,23 @@
     
 %header#navigation-bar-top
     %div#hamburger-menu
-        %p1 =
+        %i.fas.fa-bars
     %div#navigation-title 
-        %p1 Step 1
+        Welcome
     %div#icon-panel
-        %div#help ?
-        %div#home H
+        %i.fas.fa-question-circle
 %main
     %section
         %article
-            %h1#step-title Grab Bowl
-            %p1#sub-title Retrieve bowl 
-            %p1#description Reach into your cabinet and grab a bowl to use as a container for your cereal. If you don’t have one, use a ziplock bag
-
-%ul
-    %li#previous-step
-        %button <
-    %li#next-step
-        %button >
+            %h1.step-title Grab Bowl
+            %h2.sub-title Retrieve bowl 
+            %p.description Reach into your cabinet and grab a bowl to use as a container for your cereal. If you don’t have one, use a ziplock bag
+%ul#bottom-navigation-panel
+    %li.previous-step
+        %a{:href => "/recipe/start_screen"}
+            %button
+                %i.fas.fa-caret-left    
+    %li.next-step
+        %a{:href => "/recipe/step2_screen"}
+            %button
+                %i.fas.fa-caret-right
