@@ -53,6 +53,15 @@
         border-radius: 1rem;
     }
 
+    button {
+        appearance: none;
+        -webkit-appearance: none;
+
+        background: none;
+
+        border: none;
+    }
+
     .md-button {
         appearance: none;
         -webkit-appearance: none;
@@ -69,7 +78,6 @@
         display: inline-block;
         height: 36px;
         min-width: 88px;
-        padding: 6px 16px;
         line-height: 1.42857143;
         text-align: center;
         white-space: nowrap;
@@ -84,12 +92,19 @@
         border:0;
         border-radius: 2px;
         outline:0;
+        padding: 0;
         
         display: block;
         
         width: 80%;
         
         margin: 0 auto;
+    }
+    
+    .md-button a {
+        display: block;
+        
+        margin: 6px 16px;
     }
 
     #hamburger-menu {

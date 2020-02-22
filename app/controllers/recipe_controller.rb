@@ -11,4 +11,6 @@ class RecipeController < ApplicationController
   end
   def help_screen
   end
+  def hamburger_screen
+  end
 end

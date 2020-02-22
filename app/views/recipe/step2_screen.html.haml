@@ -69,7 +69,6 @@
         display: inline-block;
         height: 36px;
         min-width: 88px;
-        padding: 6px 16px;
         line-height: 1.42857143;
         text-align: center;
         white-space: nowrap;
@@ -84,12 +83,28 @@
         border:0;
         border-radius: 2px;
         outline:0;
+        padding: 0;
         
         display: block;
         
         width: 80%;
         
         margin: 0 auto;
+    }
+    
+    .md-button a {
+        display: block;
+        
+        margin: 6px 16px;
+    }
+
+    button {
+        appearance: none;
+        -webkit-appearance: none;
+
+        background: none;
+
+        border: none;
     }
 
     #hamburger-menu {
@@ -167,10 +182,27 @@
     {
         display: inline-block;
     }
-    
-    #alert-box
-    {
-        background-color: yellow;
+
+    .alert-box {
+        padding: 1rem;
+
+        border-radius: 0.5rem;
+    }
+
+    .alert-box h4 {
+        margin-top: 0;
+    }
+
+    .alert-box p {
+        margin-bottom: 0;
+    }
+
+    .background-red {
+        background: rgba(244, 81, 31, 0.5);
+    }
+
+    .background-yellow {
+        background: rgba(251, 192, 45, 0.5);
     }
     
 %header#navigation-bar-top
@@ -185,10 +217,10 @@
         %article
             %h1#step-title !    Pour Cereal
             %title#sub-title Open Cereal Box 
-            %p1#description Open the tab to the cereal box and pull open the bag carefully and add the cereal to your bowl
-            %section#alert-box
-                %p1#alert-title Watch out for the cereals
-                %p1#alert-description If you apply too much force when opening the cereal bag, the cereal may go flying across the room
+            %p#description Open the tab to the cereal box and pull open the bag carefully and add the cereal to your bowl
+            %div.alert-box.background-yellow
+                %h4#alert-title Watch out for the cereals
+                %p#alert-description If you apply too much force when opening the cereal bag, the cereal may go flying across the room
 
 %ul#bottom-navigation-panel
     %li.previous-step
