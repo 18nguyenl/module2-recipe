@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get 'recipe/step2_screen'
   get 'recipe/step3_screen'
   get 'recipe/help_screen'
+  get 'recipe/hamburger_screen'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
